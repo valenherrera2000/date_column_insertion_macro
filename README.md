@@ -1,22 +1,29 @@
 # Excel Date Column Insertion Macro
 
 ## Overview
-This VBA macro automatically inserts a new date column in Excel sheets, ideal for daily sheets and trackers.
 
-## Features
-- **Dynamic Date Insertion:** Inserts a new column with the **current date** formatted as "dd-mmm-yy".
-- **Customizable Search:** Locates the row and header specified by the user and adds a new column to its right.
-- **User Interaction:** Utilizes message boxes for confirmations and notifications about the process outcome.
+This VBA macro automatically inserts a new date column in Excel sheets
 
-## How It Works
-- The macro checks for a specific header name (e.g., "Task") in a designated row (e.g., row 4).
-- If found, it inserts a new column right next to this header.
-- It sets the new column's header to the current date, e.g., "dd-mmm-yy".
+## Purpose
+
+The purpose of this macro is to streamline new date creation in daily sheets and trackers.
 
 ## Customization
-Change the parameters in the call to `AddNewDate` within the `NewDate_Macro` subroutine.
-- Example: `AddNewDate "Task", 4`
+1. Copy and paste this code into your VBA editor.
+2. Modify the parameters passed to `AddNewDate` within the `NewDate_Macro` subroutine.
+- Example: `AddNewDate "Task", 4` (new column will be added in row 4, next to "Task" cell)
+3. Embed the macro in a button or keyboard shortcut.
+
+## Subroutines
+## Subroutines
+
+- **NewDate_Macro:** Main subroutine responsible for executing the macro.
+- **Confirmation_MsgBox:** Displays a confirmation message box before proceeding with the macro execution.
+- **Withdrawal_MsgBox:** Displays a message box indicating that the macro was not run.
+- **Success_MsgBox:** Displays a message box with the execution time if the macro runs successfully.
+- **ScreenUpdating:** Controls the screen updating feature to improve macro performance.
+- **AddNewDate:** Subroutine to perform the main action of adding a new date column. Parameters: **headerToFind**, **rowToSearch**
+
 
 ## Additional Notes
-- Embedding the macro in a button allows easy execution without navigating the VBA editor.
-- Messages will inform you if the macro was not run or if the specified header wasn't found.
+- Expand upon this macro to accommodate your project needs.
