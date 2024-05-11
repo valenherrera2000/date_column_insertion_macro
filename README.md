@@ -15,7 +15,6 @@ The purpose of this macro is to streamline new date creation in daily sheets and
 3. Embed the macro in a button or keyboard shortcut.
 
 ## Subroutines
-## Subroutines
 
 - **NewDate_Macro:** Main subroutine responsible for executing the macro.
 - **Confirmation_MsgBox:** Displays a confirmation message box before proceeding with the macro execution.
